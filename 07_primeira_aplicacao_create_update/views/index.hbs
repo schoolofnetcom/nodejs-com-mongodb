@@ -1,0 +1,32 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<p>Hello {{name}}</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Função Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <!--
+            {{#if @first}}
+            <td>20</td>
+            <td>{{@index}}</td>
+            <td>Company 20</td>
+            {{/if}}
+            -->
+            <td>{{id}}</td>
+            <td>{{@index}}</td>
+            <td>{{name}}</td>
+            <td>{{#date}}{{/date}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
